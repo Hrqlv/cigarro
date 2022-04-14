@@ -1,0 +1,23 @@
+
+  <div class="d-flex flex-column m-4">
+  <h1 class="text-center">Cigarrometro</h1>
+  <label for="cigarros" class="mb-3 mt-2" class="text-center">
+    Quantidade de cigarros por dia:
+  </label>
+  <input type="number" id="cigarros" [(ngModel)]="quantidadeCigarrosPorDia">
+
+  <label for="anos" class="mb-3 mt-2" class="text-center">
+    Quantidade de anos fumando:
+  </label>
+  <input type="number" id="anos" [(ngModel)]="quantidadeDeAnosFumando">
+
+  <button class="btn btn-success mt-3" (click)= "calcularTempoDeVidaPerdida()">
+    Calcular
+  </button>
+  <h4 class="text-center">Tempo Perdido:</h4>
+  <h2 class="text-center">{{tempoDeVidaPerdida}} dias(s)</h2>
+  <!--<div class="w-{{barra}} h-10 bg-danger"></div>-->
+  <div class="h-img d-flex justify-content-around">
+    <img src="../../assets/icon/heart.png" *ngFor="let i of [].constructor(FotoCoracao)">
+  </div>
+</div>
